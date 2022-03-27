@@ -10,6 +10,7 @@ public class FileNameCleanerTest {
     public void testCleanFileName() {
         assertEquals("legalFilename.txt", FileNameCleaner.cleanFileName("legalFilename.txt"));
         assertEquals("illegalFilename______.txt", FileNameCleaner.cleanFileName("illegalFilename/?*<>|.txt"));
+        assertEquals("illegalFilename_.txt", FileNameCleaner.cleanFileName("illegalFilename\\.txt"));
     }
 
     @Test
